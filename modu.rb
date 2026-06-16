@@ -5,20 +5,20 @@
 class Modu < Formula
   desc "多模块 Git Worktree 管理工具"
   homepage "https://github.com/qimao/modu"
-  version "0.6.7"
+  version "0.6.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qimaotech/modu/releases/download/v0.6.7/modu_0.6.7_darwin_amd64.tar.gz"
-      sha256 "2870c94748efff8b9782091631e84546bab74141792d34f70a967aa3e1f34673"
+      url "https://github.com/qimaotech/modu/releases/download/v0.6.8/modu_0.6.8_darwin_amd64.tar.gz"
+      sha256 "9e19d9d9ae3cb0da09b112307f55e0f65ca3ff57075a1c0a133d7e95e3547d4e"
 
       define_method(:install) do
         bin.install "modu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qimaotech/modu/releases/download/v0.6.7/modu_0.6.7_darwin_arm64.tar.gz"
-      sha256 "a759ed0bab8e5d27f60903e7d7f2dbb3af088f37313e13a9068ba730fd3a4181"
+      url "https://github.com/qimaotech/modu/releases/download/v0.6.8/modu_0.6.8_darwin_arm64.tar.gz"
+      sha256 "d7c0b024a52c788f151ac599137a2e27e30cd050d9669cc6ba2f899733f57bc2"
 
       define_method(:install) do
         bin.install "modu"
@@ -28,15 +28,15 @@ class Modu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qimaotech/modu/releases/download/v0.6.7/modu_0.6.7_linux_amd64.tar.gz"
-      sha256 "17f81f8dcabe13e32460ec50836dc0a15d5cf2575789c00351d3f7d29fbaf8b6"
+      url "https://github.com/qimaotech/modu/releases/download/v0.6.8/modu_0.6.8_linux_amd64.tar.gz"
+      sha256 "ca4d12804a0a2e43883d23f7a3668b5ada604ed2805d8465e27aa7a3006f7ada"
       define_method(:install) do
         bin.install "modu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qimaotech/modu/releases/download/v0.6.7/modu_0.6.7_linux_arm64.tar.gz"
-      sha256 "fd529ff228323944dab29f5d8ae9cfc043ba0cdf7e30cc7f2d04cb74a431d146"
+      url "https://github.com/qimaotech/modu/releases/download/v0.6.8/modu_0.6.8_linux_arm64.tar.gz"
+      sha256 "7af0e0c5362b08c0d88bbecbaa46fcaa5597d687b9e6d514f4b24f76193fd0aa"
       define_method(:install) do
         bin.install "modu"
       end
