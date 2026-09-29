@@ -5,20 +5,20 @@
 class Modu < Formula
   desc "多模块 Git Worktree 管理工具"
   homepage "https://github.com/qimaotech/modu"
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qimaotech/modu/releases/download/v0.7.0/modu_0.7.0_darwin_amd64.tar.gz"
-      sha256 "2972f414123e12141ce4419a25a824f3ce31554281d30d8ce1fcc5ddefd7d79a"
+      url "https://github.com/qimaotech/modu/releases/download/v0.7.1/modu_0.7.1_darwin_amd64.tar.gz"
+      sha256 "3db6392a9b00e16b1cf6f84f2a8fca7bd998844550f65b0c939b3bd64be96426"
 
       define_method(:install) do
         bin.install "modu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qimaotech/modu/releases/download/v0.7.0/modu_0.7.0_darwin_arm64.tar.gz"
-      sha256 "3f98c113b94bcc29739f945f61e49eb37ea2407bf06df17604d2bc60180dc5be"
+      url "https://github.com/qimaotech/modu/releases/download/v0.7.1/modu_0.7.1_darwin_arm64.tar.gz"
+      sha256 "f98f16d82ed996ecf41344ed2ac8bf4dcb93726ebcce6ec7afcb1acc1be96d70"
 
       define_method(:install) do
         bin.install "modu"
@@ -28,15 +28,15 @@ class Modu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qimaotech/modu/releases/download/v0.7.0/modu_0.7.0_linux_amd64.tar.gz"
-      sha256 "fb7d20af594f807497cb08516624454918c87b989c6a781c05c24e3367591fd2"
+      url "https://github.com/qimaotech/modu/releases/download/v0.7.1/modu_0.7.1_linux_amd64.tar.gz"
+      sha256 "48101365db8af7b3a24af7e63763135417378627c07686e035bbd54c1f20f5af"
       define_method(:install) do
         bin.install "modu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qimaotech/modu/releases/download/v0.7.0/modu_0.7.0_linux_arm64.tar.gz"
-      sha256 "1001c44f40d20ef55c0d07e39ea0d67ee7582643db7d307beea089236c9f1272"
+      url "https://github.com/qimaotech/modu/releases/download/v0.7.1/modu_0.7.1_linux_arm64.tar.gz"
+      sha256 "37897c1be01fdaf071ef2991815597f47af4fafaddeb90b4c8798cee658e3e31"
       define_method(:install) do
         bin.install "modu"
       end
@@ -44,6 +44,6 @@ class Modu < Formula
   end
 
   test do
-    assert_match "modu version 0.7.0", shell_output("#{bin}/modu version")
+    assert_match "modu version 0.7.1", shell_output("#{bin}/modu version")
   end
 end
